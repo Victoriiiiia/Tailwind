@@ -47,39 +47,69 @@
 
     <main>
 
-        <!-- Блок 1: Hero -->
-        <section class="relative overflow-hidden bg-white dark:bg-slate-900 py-16 md:py-20 lg:py-28 xl:py-32 transition-colors duration-300">
+<!-- Блок 1: Hero -->
+        <section class="relative overflow-hidden bg-white dark:bg-slate-900 py-12 md:py-16 lg:py-20 transition-colors duration-300">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div class="order-2 lg:order-1">
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Уникальные изделия <br class="hidden sm:block" />ручной работы
+                        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white lg:text-5xl xl:text-6xl">
+                            Уникальные изделия ручной работы
                         </h1>
-                        <p class="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 dark:text-gray-400 max-w-lg">
+                        <p class="mt-4 text-base sm:text-lg text-gray-500 dark:text-gray-400 lg:text-xl">
                             Каждое изделие создано с любовью и вниманием к деталям. Керамика, вязание, кожа — для тех, кто ценит качество и душу.
                         </p>
-                        <div class="mt-8 md:mt-10 lg:mt-12">
-                            <a href="#categories" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 sm:px-10 sm:py-4 lg:px-12 lg:py-4 text-center font-medium text-white hover:bg-indigo-700 transition-colors dark:bg-indigo-800 dark:hover:bg-indigo-900 text-base sm:text-lg lg:text-xl shadow-lg hover:shadow-xl">
+                        <div class="mt-8">
+                            <a href="#categories" class="inline-block rounded-md border border-transparent bg-indigo-600 px-6 py-2.5 sm:px-8 sm:py-3 text-center font-medium text-white hover:bg-indigo-700 transition-colors dark:bg-indigo-800 dark:hover:bg-indigo-900 text-sm sm:text-base">
                                 Смотреть каталог
                             </a>
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <div class="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
-                            <div class="col-span-2 aspect-[4/3] overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                                <img src="img/Craftwork1.jpg" srcset="img/Craftwork1-400.webp 400w, img/Craftwork1-800.webp 800w, img/Craftwork1-1200.webp 1200w" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" alt="Керамика" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                        <div class="grid grid-cols-3 gap-3 sm:gap-4">
+                            <div class="col-span-2">
+                                <img src="img/Craftwork1.jpg"
+                                     srcset="img/Craftwork1-400.webp 400w, img/Craftwork1-800.webp 800w"
+                                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                     alt="Керамика"
+                                     class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                                     loading="lazy"
+                                     decoding="async" />
                             </div>
-                            <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                                <img src="img/Craftwork2.jpg" srcset="img/Craftwork2-400.webp 400w, img/Craftwork2-800.webp 800w, img/Craftwork2-1200.webp 1200w" sizes="(max-width: 640px) 25vw, (max-width: 1024px) 16vw, 12vw" alt="Вязание" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                            <div class="col-span-1">
+                                <img src="img/Craftwork2.jpg"
+                                     srcset="img/Craftwork2-400.webp 400w, img/Craftwork2-800.webp 800w"
+                                     sizes="(max-width: 640px) 25vw, (max-width: 1024px) 16vw, 12vw"
+                                     alt="Вязание"
+                                     class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                                     loading="lazy"
+                                     decoding="async" />
                             </div>
-                            <div class="col-span-1 aspect-[4/3] overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                                <img src="img/Craftwork3.jpg" srcset="img/Craftwork3-400.webp 400w, img/Craftwork3-800.webp 800w, img/Craftwork3-1200.webp 1200w" sizes="(max-width: 640px) 25vw, (max-width: 1024px) 16vw, 12vw" alt="Кожа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                            <div class="col-span-1">
+                                <img src="img/Craftwork3.jpg"
+                                     srcset="img/Craftwork3-400.webp 400w, img/Craftwork3-800.webp 800w"
+                                     sizes="(max-width: 640px) 25vw, (max-width: 1024px) 16vw, 12vw"
+                                     alt="Кожа"
+                                     class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                                     loading="lazy"
+                                     decoding="async" />
                             </div>
-                            <div class="col-span-2 aspect-[4/3] overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                                <img src="img/Craftwork4.jpg" srcset="img/Craftwork4-400.webp 400w, img/Craftwork4-800.webp 800w, img/Craftwork4-1200.webp 1200w" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" alt="Мастер за работой" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                            <div class="col-span-2">
+                                <img src="img/Craftwork4.jpg"
+                                     srcset="img/Craftwork4-400.webp 400w, img/Craftwork4-800.webp 800w"
+                                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                     alt="Мастер за работой"
+                                     class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                                     loading="lazy"
+                                     decoding="async" />
                             </div>
-                            <div class="col-span-3 aspect-[16/6] overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                                <img src="img/Craftwork5.jpg" srcset="img/Craftwork5-400.webp 400w, img/Craftwork5-800.webp 800w, img/Craftwork5-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="Готовое изделие" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                            <div class="col-span-3">
+                                <img src="img/Craftwork5.jpg"
+                                     srcset="img/Craftwork5-400.webp 400w, img/Craftwork5-800.webp 800w"
+                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                     alt="Готовое изделие"
+                                     class="w-full h-24 sm:h-32 lg:h-36 object-cover rounded-lg"
+                                     loading="lazy"
+                                     decoding="async" />
                             </div>
                         </div>
                     </div>
