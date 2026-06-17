@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ручная работа — Изделия ручной работы</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+<header class="bg-white dark:bg-slate-900 shadow-sm sticky top-0 z-50 transition-colors duration-300 border-b border-gray-200 dark:border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400">Ручная работа</h1>
+        <nav class="hidden md:flex gap-6">
+            <a href="#categories" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Категории</a>
+            <a href="#masters" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Мастера</a>
+            <a href="#reviews" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Отзывы</a>
+            <a href="#faq" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+            <!-- Кнопка бургер-меню для мобильных -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <button id="themeToggle" class="bg-indigo-100 dark:bg-indigo-900/30 px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-indigo-200 dark:hover:bg-indigo-800/30 transition-colors text-base md:text-lg">
+                🌙
+            </button>
+        </div>
+    </div>
+    <!-- Мобильное меню -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700 shadow-lg">
+        <div class="flex flex-col p-4 gap-3">
+            <a href="#categories" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2">Категории</a>
+            <a href="#masters" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2">Мастера</a>
+            <a href="#reviews" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2">Отзывы</a>
+            <a href="#faq" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors py-2">FAQ</a>
+        </div>
+    </div>
+</header>
+
+    <main>
+
+ <!-- Блок 1: Hero -->
+<section class="relative overflow-hidden bg-white dark:bg-slate-900 py-12 md:py-16 lg:py-20 transition-colors duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            <div class="order-2 lg:order-1">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white lg:text-5xl xl:text-6xl">
+                    Уникальные изделия ручной работы
+                </h1>
+                <p class="mt-4 text-base sm:text-lg text-gray-500 dark:text-gray-400 lg:text-xl">
+                    Каждое изделие создано с любовью и вниманием к деталям. Керамика, вязание, кожа — для тех, кто ценит качество и душу.
+                </p>
+                <div class="mt-8">
+                    <a href="#categories" class="inline-block rounded-md border border-transparent bg-indigo-600 px-6 py-2.5 sm:px-8 sm:py-3 text-center font-medium text-white hover:bg-indigo-700 transition-colors dark:bg-indigo-800 dark:hover:bg-indigo-900 text-sm sm:text-base">
+                        Смотреть каталог
+                    </a>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <div class="grid grid-cols-3 gap-3 sm:gap-4">
+                    <div class="col-span-2">
+                        <img src="img/Craftwork1.jpg"
+                             srcset="img/Craftwork1-400.webp 400w, img/Craftwork1-800.webp 800w"
+                             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                             alt="Керамика"
+                             class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                             loading="lazy"
+                             decoding="async" />
+                    </div>
+                    <div class="col-span-1">
+                        <img src="img/Craftwork2.jpg"
+                             srcset="img/Craftwork2-400.webp 400w, img/Craftwork2-800.webp 800w"
+                             sizes="(max-width: 640px) 25vw, (max-width: 1024px) 16vw, 12vw"
+                             alt="Вязание"
+                             class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                             loading="lazy"
+                             decoding="async" />
+                    </div>
+                    <div class="col-span-1">
+                        <img src="img/Craftwork3.jpg"
+                             srcset="img/Craftwork3-400.webp 400w, img/Craftwork3-800.webp 800w"
+                             sizes="(max-width: 640px) 25vw, (max-width: 1024px) 16vw, 12vw"
+                             alt="Кожа"
+                             class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                             loading="lazy"
+                             decoding="async" />
+                    </div>
+                    <div class="col-span-2">
+                        <img src="img/Craftwork4.jpg"
+                             srcset="img/Craftwork4-400.webp 400w, img/Craftwork4-800.webp 800w"
+                             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                             alt="Мастер за работой"
+                             class="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-lg"
+                             loading="lazy"
+                             decoding="async" />
+                    </div>
+                    <div class="col-span-3">
+                        <img src="img/Craftwork5.jpg"
+                             srcset="img/Craftwork5-400.webp 400w, img/Craftwork5-800.webp 800w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                             alt="Готовое изделие"
+                             class="w-full h-24 sm:h-32 lg:h-36 object-cover rounded-lg"
+                             loading="lazy"
+                             decoding="async" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Блок 2: Категории -->
+        <section id="categories" class="bg-gray-100 dark:bg-slate-800 py-16 md:py-24 transition-colors duration-300 scroll-mt-20">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Категории</h2>
+                <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+                    <div class="group relative">
+                        <img src="img/Craftwork8.jpg"
+                             srcset="img/Craftwork8-400.webp 400w, img/Craftwork8-800.webp 800w, img/Craftwork8-1200.webp 1200w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                             alt="Керамика"
+                             class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                             loading="lazy"
+                             decoding="async" />
+                        <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Керамика
+                            </a>
+                        </h3>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white">от 2 500 ₽</p>
+                    </div>
+                    <div class="group relative">
+                        <img src="img/Craftwork9.jpg"
+                             srcset="img/Craftwork9-400.webp 400w, img/Craftwork9-800.webp 800w, img/Craftwork9-1200.webp 1200w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                             alt="Вязание"
+                             class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                             loading="lazy"
+                             decoding="async" />
+                        <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Вязание
+                            </a>
+                        </h3>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white">от 1 800 ₽</p>
+                    </div>
+                    <div class="group relative">
+                        <img src="img/Craftwork10.jpg"
+                             srcset="img/Craftwork10-400.webp 400w, img/Craftwork10-800.webp 800w, img/Craftwork10-1200.webp 1200w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                             alt="Кожа"
+                             class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                             loading="lazy"
+                             decoding="async" />
+                        <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Кожа
+                            </a>
+                        </h3>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white">от 3 200 ₽</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 3: Избранные мастера -->
+        <section id="masters" class="bg-white dark:bg-slate-900 py-16 md:py-24 transition-colors duration-300 scroll-mt-20">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center">Избранные мастера</h2>
+                <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+                    <div class="group relative">
+                        <img src="img/Craftwork3.jpg"
+                             srcset="img/Craftwork3-400.webp 400w, img/Craftwork3-800.webp 800w, img/Craftwork3-1200.webp 1200w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                             alt="Анна Керамист"
+                             class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                             loading="lazy"
+                             decoding="async" />
+                        <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                🥇 Анна Керамист
+                            </a>
+                        </h3>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white">Керамика ручной работы</p>
+                        <p class="text-sm text-indigo-600 dark:text-indigo-400">⭐ 4.9 (48 отзывов)</p>
+                    </div>
+                    <div class="group relative">
+                        <img src="img/Craftwork5.jpg"
+                             srcset="img/Craftwork5-400.webp 400w, img/Craftwork5-800.webp 800w, img/Craftwork5-1200.webp 1200w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                             alt="Мария Вязание"
+                             class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                             loading="lazy"
+                             decoding="async" />
+                        <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                🥈 Мария Вязание
+                            </a>
+                        </h3>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white">Вязаные изделия</p>
+                        <p class="text-sm text-indigo-600 dark:text-indigo-400">⭐ 4.8 (36 отзывов)</p>
+                    </div>
+                    <div class="group relative">
+                        <img src="img/Craftwork1.jpg"
+                             srcset="img/Craftwork1-400.webp 400w, img/Craftwork1-800.webp 800w, img/Craftwork1-1200.webp 1200w"
+                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                             alt="Игорь Кожевник"
+                             class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                             loading="lazy"
+                             decoding="async" />
+                        <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                🥉 Игорь Кожевник
+                            </a>
+                        </h3>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white">Кожаные изделия</p>
+                        <p class="text-sm text-indigo-600 dark:text-indigo-400">⭐ 4.7 (27 отзывов)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 4: Показатели -->
+        <section class="bg-gray-100 dark:bg-slate-800 py-16 md:py-24 transition-colors duration-300">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">Наши показатели</h2>
+                    <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white sm:text-5xl">Цифры, которым можно доверять</p>
+                    <p class="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">Мы работаем с 2020 года и за это время помогли тысячам мастеров найти своих покупателей.</p>
+                </div>
+                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900 dark:text-white">
+                                <div class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6 text-white">
+                                        <path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 9.337 9.337 0 002.625-.372M15 11.25a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                Покупателей
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600 dark:text-gray-400">15 000+ довольных клиентов по всей России</dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900 dark:text-white">
+                                <div class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6 text-white">
+                                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                Мастеров
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600 dark:text-gray-400">300+ проверенных мастеров в каталоге</dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base/7 font-semibold text-gray-900 dark:text-white">
+                                <div class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6 text-white">
+                                        <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 9v7.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                Часов работы
+                            </dt>
+                            <dd class="mt-2 text-base/7 text-gray-600 dark:text-gray-400">40 часов в неделю — мы всегда на связи</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 5: Статистика -->
+        <section class="bg-white dark:bg-slate-900 py-16 md:py-24 transition-colors duration-300">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600 dark:text-gray-400">Товаров продано</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">44 000+</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600 dark:text-gray-400">Рейтинг доверия</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">4.9 ★</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600 dark:text-gray-400">Новых мастеров ежемесячно</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">46</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Блок 6: FAQ -->
+        <section id="faq" class="bg-gray-100 dark:bg-slate-800 py-16 md:py-24 transition-colors duration-300 scroll-mt-20">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                    <div>
+                        <h2 class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Часто задаваемые вопросы</h2>
+                        <p class="mt-4 text-lg/8 text-gray-600 dark:text-gray-400">Мы собрали самые популярные вопросы, чтобы вы могли быстро найти ответ.</p>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <ul role="list" class="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
+                            <li>
+                                <div class="flex gap-x-4">
+                                    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 text-lg font-bold">?</span>
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Как осуществляется доставка?</h3>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Доставка по всей России от 3 до 10 дней.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex gap-x-4">
+                                    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 text-lg font-bold">?</span>
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Можно ли вернуть товар?</h3>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Да, в течение 14 дней после получения.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex gap-x-4">
+                                    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 text-lg font-bold">?</span>
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Как оплатить заказ?</h3>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Картой, электронными деньгами или наличными.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex gap-x-4">
+                                    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 text-lg font-bold">?</span>
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Как связаться с поддержкой?</h3>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Чат на сайте или 8 (800) 123-45-67.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex gap-x-4">
+                                    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 text-lg font-bold">?</span>
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Есть ли гарантия?</h3>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Да, 30 дней на все товары.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex gap-x-4">
+                                    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 text-lg font-bold">?</span>
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Как стать мастером?</h3>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Заполните форму на сайте, мы свяжемся с вами.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 7: Отзывы -->
+        <section id="reviews" class="bg-white dark:bg-slate-900 py-16 md:py-24 transition-colors duration-300 scroll-mt-20">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl text-center mb-12">Что говорят наши покупатели</h2>
+                <ul role="list" class="divide-y divide-gray-200 dark:divide-white/5">
+                    <li class="flex justify-between gap-x-6 py-5">
+                        <div class="flex min-w-0 gap-x-4">
+                            <img src="img/Craftwork3.jpg"
+                                 srcset="img/Craftwork3-400.webp 400w, img/Craftwork3-800.webp 800w, img/Craftwork3-1200.webp 1200w"
+                                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 200px"
+                                 alt="Елена"
+                                 class="size-12 flex-none rounded-full bg-gray-200 dark:bg-gray-800 object-cover" />
+                            <div class="min-w-0 flex-auto">
+                                <p class="text-sm/6 font-semibold text-gray-900 dark:text-white">Елена</p>
+                                <p class="mt-1 truncate text-xs/5 text-gray-600 dark:text-gray-400">«Заказала керамический чайник. Качество превосходное, доставка быстрая.»</p>
+                            </div>
+                        </div>
+                        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-indigo-600 dark:text-indigo-400">Керамика</p>
+                            <p class="text-xs/5 text-gray-600 dark:text-gray-400">⭐ 5.0</p>
+                        </div>
+                    </li>
+                    <li class="flex justify-between gap-x-6 py-5">
+                        <div class="flex min-w-0 gap-x-4">
+                            <img src="img/Craftwork5.jpg"
+                                 srcset="img/Craftwork5-400.webp 400w, img/Craftwork5-800.webp 800w, img/Craftwork5-1200.webp 1200w"
+                                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 200px"
+                                 alt="Алексей"
+                                 class="size-12 flex-none rounded-full bg-gray-200 dark:bg-gray-800 object-cover" />
+                            <div class="min-w-0 flex-auto">
+                                <p class="text-sm/6 font-semibold text-gray-900 dark:text-white">Алексей</p>
+                                <p class="mt-1 truncate text-xs/5 text-gray-600 dark:text-gray-400">«Вязаный свитер — просто сказка. Тёплый, мягкий, красивый.»</p>
+                            </div>
+                        </div>
+                        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-indigo-600 dark:text-indigo-400">Вязание</p>
+                            <p class="text-xs/5 text-gray-600 dark:text-gray-400">⭐ 4.8</p>
+                        </div>
+                    </li>
+                    <li class="flex justify-between gap-x-6 py-5">
+                        <div class="flex min-w-0 gap-x-4">
+                            <img src="img/Craftwork1.jpg"
+                                 srcset="img/Craftwork1-400.webp 400w, img/Craftwork1-800.webp 800w, img/Craftwork1-1200.webp 1200w"
+                                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 200px"
+                                 alt="Наталья"
+                                 class="size-12 flex-none rounded-full bg-gray-200 dark:bg-gray-800 object-cover" />
+                            <div class="min-w-0 flex-auto">
+                                <p class="text-sm/6 font-semibold text-gray-900 dark:text-white">Наталья</p>
+                                <p class="mt-1 truncate text-xs/5 text-gray-600 dark:text-gray-400">«Кожаный рюкзак — идеальный. Качество на высоте, швы ровные.»</p>
+                            </div>
+                        </div>
+                        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-indigo-600 dark:text-indigo-400">Кожа</p>
+                            <p class="text-xs/5 text-gray-600 dark:text-gray-400">⭐ 4.9</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700 py-12 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">Ручная работа</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        Интернет-магазин изделий ручной работы. Керамика, вязание, кожа — для тех, кто ценит качество и душу.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">Навигация</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#categories" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Категории</a></li>
+                        <li><a href="#masters" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Мастера</a></li>
+                        <li><a href="#reviews" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Отзывы</a></li>
+                        <li><a href="#faq" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">Свяжитесь с нами</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                            <span class="text-indigo-600 dark:text-indigo-400">✉</span>
+                            <a href="mailto:hello@ruchnaya-rabota.ru" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">hello@ruchnaya-rabota.ru</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-indigo-600 dark:text-indigo-400">📞</span>
+                            <a href="tel:88001234567" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">8 (800) 123-45-67</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-indigo-600 dark:text-indigo-400">🕐</span>
+                            <span class="text-gray-600 dark:text-gray-300">Пн–Пт: 10:00 – 19:00</span>
+                        </li>
+                    </ul>
+                    <!-- Социальные сети из папки img с круглым фоном -->
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-700 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-colors duration-300">
+                            <img src="img/telegram.svg" alt="Telegram" class="w-5 h-5" />
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-700 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-colors duration-300">
+                            <img src="img/vk.svg" alt="VK" class="w-5 h-5" />
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-700 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-colors duration-300">
+                            <img src="img/pinterest.svg" alt="Pinterest" class="w-5 h-5" />
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-700 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-colors duration-300">
+                            <img src="img/youtube.svg" alt="YouTube" class="w-5 h-5" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-slate-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                <p>© 2026 Ручная работа. Все права защищены.</p>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Условия использования</a>
+                    <a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Карта сайта</a>
+                </div>
+            </div>
+            <div class="text-center text-xs text-gray-400 dark:text-gray-500 mt-6">
+                Учебный проект по оптимизации веб-приложений. Разработчик — Бобрикова Виктория
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
